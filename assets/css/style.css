@@ -1,0 +1,174 @@
+
+body{
+    background-image: url("../img/beach.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+        ". A A"
+        ". . ."
+        "C C ."
+        ". D D"
+        ". . ."
+        "F F F"
+        "G H H";
+    grid-template-rows: 150px 50px 70px 70px 60px 150px 40px;
+    text-align: center;
+    grid-row-gap: 12px;
+}
+.toplayer{
+    grid-area: A;
+    justify-self: end;
+    align-self: center;
+}
+.toplayer input{
+    background-color: black;
+    opacity: 40%;
+    color: white;
+    height: 30px;
+    width: 85px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 10px;
+    font-family: "Comic Sans MS";
+}
+.midfirst{
+    grid-area: C;
+    justify-self: center;
+    align-self: end;
+}
+.midfirst p{
+    font-size: 30px;
+    color: white;
+}
+.midsecond{
+    grid-area: D;
+    justify-self: center;
+    align-self: start;
+}
+.midsecond p{
+    font-size: 30px;
+    color: white;
+}
+.bottomlayer{
+    grid-area: F;
+    align-self: end;
+}
+.footericons{
+    grid-area: G;
+    justify-self: center;
+}
+.footerrights{
+    grid-area: H;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    justify-self: end;
+}
+.textbox{
+    height: 33px;
+    width: 350px;
+    border-radius: 40px;
+    text-indent: 15px;
+}
+::-webkit-input-placeholder{
+    opacity: 80%;
+    font-family: Cambria;
+}
+.button{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    border-radius: 20px;
+    height: 28px;
+    padding-top: 3px;
+    width: 90px;
+    margin-left: -98px;
+    font-size: 12px;
+    font-family: Cambria;
+}
+
+@media only screen and (min-width: 700px) {
+    .container{
+        grid-template-areas:
+                ". A A"
+                ". . ."
+                ". C ."
+                ". D ."
+                ". . ."
+                "F F F"
+                "G . H";
+        grid-template-rows: 150px 140px 70px 70px 100px 230px 40px;
+    }
+    .footerrights{
+        grid-area: H;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        justify-self: center;
+    }
+    .midfirst{
+        grid-area: C;
+        justify-self: start;
+        align-self: end;
+    }
+    .midfirst p{
+        font-size: 46px;
+        color: white;
+    }
+    .midsecond{
+        grid-area: D;
+        justify-self: end;
+        align-self: end;
+    }
+    .midsecond p{
+        font-size: 46px;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .container{
+        grid-template-areas:
+                ". A A"
+                ". . ."
+                ". C ."
+                ". D ."
+                ". . ."
+                "F F F"
+                "G . H";
+        grid-template-rows: 150px 140px 70px 70px 100px 280px 40px;
+    }
+    .footerrights{
+        grid-area: H;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        justify-self: center;
+    }
+    .midfirst{
+        grid-area: C;
+        margin-left: 60px;
+        justify-self: start;
+        align-self: end;
+    }
+    .midfirst p{
+        font-size: 60px;
+        color: white;
+    }
+    .midsecond{
+        grid-area: D;
+        margin-right: 60px;
+        justify-self: end;
+        align-self: end;
+    }
+    .midsecond p{
+        font-size: 60px;
+        color: white;
+    }
+}
